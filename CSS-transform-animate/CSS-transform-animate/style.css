@@ -1,0 +1,18 @@
+body {
+    width: 100vw;
+    background-color: black;
+    color: blue;
+    font-size: 48px;
+}
+
+div {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+p {
+
+}
+
+
