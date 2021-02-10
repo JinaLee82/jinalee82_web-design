@@ -1,0 +1,212 @@
+.module {
+    cursor: url('pig.png'), auto;	
+  }
+
+
+.emptyspace {
+    height: 810px;
+}
+
+h1 {
+    margin: 0px 0px 1px -515px;
+}
+
+
+  /* 1_out-homepage */
+body {
+    background-image: url(homepage2.png), url(homepage.png);
+    background-position: center;
+    background-repeat: no-repeat, no-repeat;
+    padding-top: 3px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+
+    /*Multiple Backgrounds Overlapping
+
+    background-image: url(homepage2.png);
+    background-position: center fixed;
+    background-repeat: no-repeat;
+    background-position: absolute;
+    width: 1385px;
+    height: 920px;
+    left: -695px;
+    top: -460px;
+    border-radius: 0px;
+    z-index: 1;
+
+    background-image: url(homepage.png);
+    background-position: center fixed;
+    background-repeat: no-repeat;
+    background-position: absolute;
+    background-size: cover;
+    z-index: 2;
+    */
+
+
+
+   }
+/* 1_in-homepage */
+
+
+
+/* Auto Layout */
+/* This style will not apply 
+    #interface{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px;
+
+        position: absolute;
+        width: 257px;
+        height: 43px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        background-color: white;
+        border: 1px solid purple;
+        border-radius: 10px;
+        display: inline-block;
+        font: inherit;
+        line-height: 1.5em;
+        padding: 0.5em 3.5em 0.5em 1em;
+        
+        margin: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        
+        background-image:
+        linear-gradient(45deg, transparent 50%, gray 50%),
+        linear-gradient(135deg, gray 50%, transparent 50%),
+        radial-gradient(#ddd 70%, transparent 72%);
+        background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        calc(100% - .5em) .5em;
+        background-size:
+        5px 5px,
+        5px 5px,
+        1.5em 1.5em;
+        background-repeat: no-repeat;
+    }
+*/
+
+body {
+    --accent-color: orangered;
+    --background-color: white;
+    --text-color: black;
+    --button-text-color: var(--background-color);
+    --transition-delay: 1s;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+  
+    transition: var(--transition-delay);
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  body.dark {
+    --accent-color: #D0D066;
+    --background-color: #333;
+    --text-color: white;
+  }
+  
+  .title {
+    margin: 0;
+    margin-bottom: .5rem;
+  }
+  
+  .theme-toggle-button {
+    background-color: var(--accent-color);
+    color: var(--button-text-color);
+    left: -590px;
+    top: 331px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: .5em 1em;
+    border-radius: .3em;
+    border: none;
+    outline: none;
+    transition: var(--transition-delay);
+    transform: scale(1);
+  }
+  
+  .theme-toggle-button .icon {
+    margin-right: .5em;
+  }
+  
+  .theme-toggle-button:hover,
+  .theme-toggle-button:focus {
+    transform: scale(1.1);
+  }
+  
+  .sun-moon-container {
+    --rotation: 0;
+  
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    height: 200vmin;
+    transform: rotate(calc(var(--rotation) * 1deg));
+    transition: transform var(--transition-delay);
+  }
+  
+  .sun,
+  .moon {
+    position: absolute;
+    transition: opacity, fill, var(--transition-delay);
+    width: 30px;
+    height: 30px;
+    fill: var(--accent-color);
+  }
+  
+  .sun {
+    top: 5%;
+    opacity: 1;
+  }
+  
+  .dark .sun {
+    opacity: 0;
+  }
+  
+  .moon {
+    bottom: 5%;
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  
+  .dark .moon {
+    opacity: 1;
+  }
+
+
+  * {margin:0;padding:0;}
+            .banner {position:relative;display:inline-block;}
+            .banner img {max-width:100%;}
+            .banner span.text {position:absolute;top:50%;left:0;transform:translateY(-50%);display:none;width:100%;font-size:70px;color:#fff;font-weight:900;text-align:center;}
+            .banner::before, .banner::after{content:'';position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);transition:all .8s;-webkit-transition:all .8s;}
+            .banner::before {width:97%;height:95%;border-top:2px solid #fff;border-bottom:2px solid #fff;width:0;} 
+            .banner::after {width:97%;border-left:2px solid #fff;border-right:2px solid #fff;height:0;} 
+            
+            /* hover reaction */
+            .banner:hover span.text {display:block;}
+            .banner:hover::before {width:calc(97% + 4px);} /* The part that needs to give the value for the correct rectangle depending on the screen */
+            .banner:hover::after {height:calc(95% + 4px);} /* I used the calc value to make the correct edge by adding the thickness of the border. */
